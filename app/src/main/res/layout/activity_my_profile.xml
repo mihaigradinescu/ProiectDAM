@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyProfile">
+
+    <TextView
+        android:id="@+id/myprofileHelloET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/myprofileHelloText"
+        app:layout_constraintBottom_toTopOf="@+id/myprofilePasswordET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/myprofilePasswordTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="399dp"
+        android:text="@string/myprofilePasswordText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/myprofilePasswordET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myprofileHelloET" />
+
+    <EditText
+        android:id="@+id/myprofilePasswordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="384dp"
+        android:ems="10"
+        android:hint="@string/myprofilePasswordText"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myprofilePasswordTW"
+        app:layout_constraintTop_toBottomOf="@+id/myprofileHelloET" />
+
+    <TextView
+        android:id="@+id/myprofilePasswordCheckTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="342dp"
+        android:text="@string/myprofilePasswordText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myprofilePasswordTW" />
+
+    <EditText
+        android:id="@+id/myprofilePasswordCheckET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="315dp"
+        android:ems="10"
+        android:hint="@string/myprofilePasswordCheckText"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myprofilePasswordCheckTW"
+        app:layout_constraintTop_toBottomOf="@+id/myprofilePasswordET" />
+
+    <Button
+        android:id="@+id/myprofileChangePasswordB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="189dp"
+        android:layout_marginBottom="250dp"
+        android:text="Change Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myprofilePasswordCheckET" />
+</android.support.constraint.ConstraintLayout>

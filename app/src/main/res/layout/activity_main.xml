@@ -7,12 +7,90 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/loginUsernameTW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="73dp"
+        android:text="@string/loginUsernameText"
+        app:layout_constraintBottom_toTopOf="@+id/loginPasswordTW"
+        app:layout_constraintEnd_toStartOf="@+id/loginUsernameET"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/loginUsernameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="45dp"
+        android:ems="10"
+        android:hint="@string/loginUsernameText"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/loginPasswordET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loginUsernameTW"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginPasswordTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="369dp"
+        android:text="@string/loginPasswordText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/loginPasswordET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginUsernameTW" />
+
+    <EditText
+        android:id="@+id/loginPasswordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="358dp"
+        android:ems="10"
+        android:hint="@string/loginPasswordText"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loginPasswordTW"
+        app:layout_constraintTop_toBottomOf="@+id/loginUsernameET" />
+
+    <Button
+        android:id="@+id/loginRegisterB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="255dp"
+        android:layout_marginBottom="244dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordTW" />
+
+    <Button
+        android:id="@+id/loginSignInB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="245dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loginRegisterB"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordET" />
 
 </android.support.constraint.ConstraintLayout>

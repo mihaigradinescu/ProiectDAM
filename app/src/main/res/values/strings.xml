@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Proiect.v1</string>
+    <string name="loginPasswordText">Password</string>
+    <string name="loginUsernameText">Username</string>
+    <string name="registerEmailText">Email</string>
+    <string name="registerPasswordText">Password</string>
+    <string name="registerPasswordCheckText">Check Password</string>
+    <string name="registerAddressText">Address</string>
+    <string name="registerMaleText">Male</string>
+    <string name="registerFemaleText">Female</string>
+    <string name="myprofileHelloText">Salut ###Username###</string>
+    <string name="myprofilePasswordText">Password</string>
+    <string name="myprofilePasswordCheckText">Check Password</string>
 </resources>
