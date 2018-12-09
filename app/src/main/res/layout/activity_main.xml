@@ -40,6 +40,7 @@
         android:id="@+id/loginPasswordTW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
         android:layout_marginTop="73dp"
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="369dp"
@@ -73,6 +74,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="255dp"
         android:layout_marginBottom="244dp"
+        android:onClick="onRegister"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,10 +89,27 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="113dp"
         android:layout_marginBottom="245dp"
-        android:text="Button"
+        android:onClick="onLogin"
+        android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/loginRegisterB"
         app:layout_constraintTop_toBottomOf="@+id/loginPasswordET" />
+
+    <TextView
+        android:id="@+id/mainEchipaTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/mainEchipaText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginRegisterB"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

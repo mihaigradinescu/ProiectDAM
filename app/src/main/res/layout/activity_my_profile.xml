@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyProfile">
+    tools:context=".MyProfileActivity">
 
     <TextView
         android:id="@+id/myprofileHelloET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="183dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/myprofileHelloText"
+        android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/myprofilePasswordET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="399dp"
+        android:layout_marginBottom="394dp"
         android:text="@string/myprofilePasswordText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/myprofilePasswordET"
@@ -93,4 +93,68 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myprofilePasswordCheckET" />
+
+    <Button
+        android:id="@+id/myprofileStartQuizB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="152dp"
+        android:onClick="startQuiz"
+        android:text="Start Quiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myprofileChangePasswordB"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/myprofileReviewB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="54dp"
+        android:onClick="goToReview"
+        android:text="Review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/myprofileContactB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myprofileStartQuizB" />
+
+    <Button
+        android:id="@+id/myprofileContactB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="54dp"
+        android:onClick="goToContact"
+        android:text="Contact us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/myprofileAboutB"
+        app:layout_constraintStart_toEndOf="@+id/myprofileReviewB"
+        app:layout_constraintTop_toBottomOf="@+id/myprofileChangePasswordB"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/myprofileAboutB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="54dp"
+        android:onClick="goToAbout"
+        android:text="About"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myprofileContactB"
+        app:layout_constraintTop_toBottomOf="@+id/myprofilePasswordCheckET" />
+
 </android.support.constraint.ConstraintLayout>
