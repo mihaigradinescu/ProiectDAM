@@ -28,6 +28,11 @@ public class MyProfileActivity extends Activity {
         startActivity(intent);
     }
 
+    public void goToHaveBeer(View view){
+        Intent intent = new Intent(this, HaveABeerInsteadActivity.class);
+        startActivity(intent);
+    }
+
     public void goToReview(View view) {
         Intent intent = new Intent(this, ReviewActivity.class);
         startActivity(intent);
