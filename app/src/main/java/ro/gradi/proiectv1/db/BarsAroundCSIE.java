@@ -1,9 +1,23 @@
-package ro.gradi.bere;
+package ro.gradi.proiectv1.db;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.annotation.NonNull;
+
+@Entity(tableName = "pubs")
 public class BarsAroundCSIE {
+
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "name")
     public String name;
+
+    @ColumnInfo(name = "rating")
     public double rating;
+    @ColumnInfo(name = "vicinity")
     public String vicinity;
+    @ColumnInfo(name = "photoURL")
     public String photoURL;
 
     public BarsAroundCSIE() {
@@ -14,7 +28,6 @@ public class BarsAroundCSIE {
         this.rating = rating;
         this.vicinity = vicinity;
     }
-
 
     public String getName() {
         return name;

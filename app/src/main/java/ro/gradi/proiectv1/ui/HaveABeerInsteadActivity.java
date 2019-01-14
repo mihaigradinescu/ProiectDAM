@@ -1,12 +1,15 @@
-package ro.gradi.proiectv1;
+package ro.gradi.proiectv1.ui;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -22,8 +25,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import ro.gradi.bere.BarsAroundCSIE;
-import ro.gradi.bere.BeerAdapter;
+import ro.gradi.proiectv1.PubsApplication;
+import ro.gradi.proiectv1.R;
+import ro.gradi.proiectv1.db.BarsAroundCSIE;
+import ro.gradi.proiectv1.db.PubsDatabase;
 
 public class HaveABeerInsteadActivity extends Activity {
 
@@ -47,10 +52,21 @@ public class HaveABeerInsteadActivity extends Activity {
         bList = findViewById(R.id.main_list);
 
         barsList = new ArrayList<>();
-        adapter = new BeerAdapter(getApplicationContext(), barsList);
+        adapter = new BeerAdapter(getApplicationContext(), barsList, new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                int idx = bList.getChildLayoutPosition(v);
+                BarsAroundCSIE barsAroundCSIE = barsList.get(idx);
+                PubsApplication app = (PubsApplication)getApplicationContext();
+                app.setCurrentBar(barsAroundCSIE);
+//                Toast.makeText(HaveABeerInsteadActivity.this, barsAroundCSIE.getName(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(HaveABeerInsteadActivity.this, Quiz1Activity.class);
+                startActivity(intent);
+            }
+        });
 
         linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(linearLayoutManager.VERTICAL);
+        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         dividerItemDecoration = new DividerItemDecoration(bList.getContext(), linearLayoutManager.getOrientation());
 
         bList.setHasFixedSize(true);
@@ -96,10 +112,19 @@ public class HaveABeerInsteadActivity extends Activity {
 
 
                         barsList.add(bar);
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     progressDialog.dismiss();
+                }
+
+                List<BarsAroundCSIE> allPubs = PubsDatabase.getDatabase(HaveABeerInsteadActivity.this).barsDao().getAllPubs();
+                if (allPubs.isEmpty()) {
+                    PubsDatabase.getDatabase(HaveABeerInsteadActivity.this).barsDao().insertBars(barsList);
+                } else {
+                    barsList.clear();
+                    barsList.addAll(allPubs);
                 }
                 adapter.notifyDataSetChanged();
                 progressDialog.dismiss();

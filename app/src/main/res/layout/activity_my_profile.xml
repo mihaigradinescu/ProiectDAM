@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyProfileActivity">
+    tools:context=".ui.MyProfileActivity">
 
     <TextView
         android:id="@+id/myprofileHelloET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="20dp"
@@ -96,20 +96,35 @@
         app:layout_constraintTop_toBottomOf="@+id/myprofilePasswordCheckET" />
 
     <Button
-        android:id="@+id/myprofileStartQuizB"
+        android:id="@+id/logoutB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="51dp"
         android:layout_marginBottom="152dp"
-        android:onClick="startQuiz"
-        android:text="Start Quiz"
+        android:onClick="onLogout"
+        android:text="Logout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myprofileChangePasswordB"
         app:layout_constraintVertical_bias="1.0" />
+    <!--<Button-->
+        <!--android:id="@+id/myprofileStartQuizB"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="32dp"-->
+        <!--android:layout_marginLeft="32dp"-->
+        <!--android:layout_marginTop="51dp"-->
+        <!--android:layout_marginBottom="152dp"-->
+        <!--android:onClick="startQuiz"-->
+        <!--android:text="Start Quiz"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/button"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/myprofileChangePasswordB"-->
+        <!--app:layout_constraintVertical_bias="1.0" />-->
 
     <Button
         android:id="@+id/myprofileReviewB"
@@ -124,7 +139,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/myprofileContactB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myprofileStartQuizB" />
+        app:layout_constraintTop_toBottomOf="@+id/logoutB" />
 
     <Button
         android:id="@+id/myprofileContactB"
@@ -166,10 +181,37 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="50dp"
         android:onClick="goToHaveBeer"
-        android:text="Have a Beer Instead"
+        android:text="Pub Review"
         app:layout_constraintBottom_toTopOf="@+id/myprofileContactB"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myprofileStartQuizB"
+        app:layout_constraintStart_toEndOf="@+id/logoutB"
         app:layout_constraintTop_toBottomOf="@+id/myprofileChangePasswordB" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_child_care"
+        app:layout_constraintBottom_toTopOf="@+id/myprofilePasswordTW"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/historyReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="openHistory"
+        android:text="Open History"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myprofileChangePasswordB"
+        app:layout_constraintTop_toBottomOf="@+id/myprofilePasswordCheckET" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

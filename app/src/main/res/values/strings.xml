@@ -17,8 +17,8 @@
     <string name="aboutHistoryText">Aceasta echipa este formata din: Mihai Gradinescu, Ioan Irimia, Florin Ivan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi finibus eros id elementum dictum. Nam eu lectus quis dolor pharetra aliquet. Nulla facilisi. Donec magna mi, tincidunt in pulvinar eu, tristique ut mi. In tortor quam, vulputate ac dictum sagittis, viverra sed urna.</string>
     <string name="quiz3SwitchText">Ati mai facut quiz-ul nostru?</string>
     <string name="mainEchipaText">Bun venit la proiectul studentilor: Gradinescu Mihai, Irimia Ioan, Ivan Florin</string>
-    <string name="quiz4QuestionText">Intrebare lorem ipsum?</string>
-    <string name="quiz4VariantaA">Varianta A</string>
-    <string name="quiz4VariantaB">Varianta B</string>
-    <string name="quiz4VariantaC">Varianta C</string>
+    <string name="quiz4QuestionText">Ati recomanda acest bar unui prieten</string>
+    <string name="quiz4VariantaA">Nu as mai calca niciodata aici</string>
+    <string name="quiz4VariantaB">Merita vizitat o data</string>
+    <string name="quiz4VariantaC">As merge aici zilnic</string>
 </resources>

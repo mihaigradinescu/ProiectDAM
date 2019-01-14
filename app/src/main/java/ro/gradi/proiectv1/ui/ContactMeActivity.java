@@ -1,7 +1,9 @@
-package ro.gradi.proiectv1;
+package ro.gradi.proiectv1.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import ro.gradi.proiectv1.R;
 
 public class ContactMeActivity extends Activity {
 

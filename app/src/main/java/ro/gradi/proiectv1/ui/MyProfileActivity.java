@@ -1,11 +1,16 @@
-package ro.gradi.proiectv1;
+package ro.gradi.proiectv1.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
+
+import ro.gradi.proiectv1.R;
+import ro.gradi.proiectv1.utils.PrefsUtils;
 
 public class MyProfileActivity extends Activity {
 
@@ -18,9 +23,21 @@ public class MyProfileActivity extends Activity {
 
         myprofileHelloET = findViewById(R.id.myprofileHelloET);
 
-        String helloUsername= getIntent().getStringExtra("EXTRA_USERNAME");
+        String username= getIntent().getStringExtra("EXTRA_USERNAME");
+        if (username == null) {
+            username = PrefsUtils.readUsername(this);
+        }
 
-        myprofileHelloET.setText("Salut " + helloUsername);
+        PrefsUtils.saveUsername(this, username);
+        myprofileHelloET.setText("Salut " + username);
+
+        ImageView avatar = findViewById(R.id.imageView3);
+        Picasso.get()
+                .load(R.drawable.ic_child_care)
+                .placeholder(android.R.drawable.sym_def_app_icon)
+                .fit()
+                .into(avatar);
+
     }
 
     public void startQuiz(View view) {
@@ -45,6 +62,18 @@ public class MyProfileActivity extends Activity {
 
     public void goToContact(View view) {
         Intent intent = new Intent(this, ContactMeActivity.class);
+        startActivity(intent);
+    }
+
+    public void onLogout(View view) {
+        PrefsUtils.saveUsername(this, null);
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
+    public void openHistory(View view) {
+        Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
     }
 }
